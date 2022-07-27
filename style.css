@@ -10,7 +10,8 @@
     max-height: auto;
     width:960px;
     height:900px;
-   
+   background-color: white;
+   border: 10px solid rgba(94, 122, 113, 0.568);
 }
 .container > div{
     border: 1px solid black;
@@ -18,12 +19,26 @@
     overflow: hidden;
      margin:0;
 }
-.display {
-background-color: red;
+
+.header{
+    display: flex;
+    justify-content:space-between;
 }
-.button{
+.flexbox2{
     
 }
-.div{
-    
+body {
+    background: linear-gradient(-50deg, #e22f2f, #6e19dd, #0fe762, #cbf70a);
+    background-size: 400% 400%;
+    animation: backgroundMoving 15s ease infinite;
 }
+@keyframes backgroundMoving {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }}

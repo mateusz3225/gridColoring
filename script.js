@@ -1,5 +1,6 @@
 
 const container= document.querySelector('.container');
+const button = document.querySelector('button');
 let square;
    for (i=0;i<256;i++){
         
@@ -16,7 +17,7 @@ divs.forEach( (div) =>
 
     div.addEventListener('mouseover', (e) => 
     { 
-        e.target.style.backgroundColor = 'black';
+        e.target.style.backgroundColor = 'orange';
        e.target.count += 0.5;
        e.target.style.opacity = 0.2 * e.target.count;
         
@@ -26,7 +27,7 @@ divs.forEach( (div) =>
 });
 
 
-const button = document.querySelector('button');
+
 button.onclick= () => {
     const allDivs= document.querySelectorAll('.div');
     const number =prompt("how large do u want your grid ? from 1 to 100");
@@ -38,14 +39,25 @@ button.onclick= () => {
         square=document.createElement(`div`);
         square.classList.add('div');
         container.appendChild(square);
-       
+    }
 
 
         const divs= document.querySelectorAll(".div");
-        divs.forEach( (div) =>{ div.addEventListener('mouseover', () => { div.classList.add("display");});}  )
+        divs.forEach( (div) =>
+{     div.count = 0;
+
+    div.addEventListener('mouseover', (e) => 
+    { 
+        e.target.style.backgroundColor = 'black';
+       e.target.count += 0.5;
+       e.target.style.opacity = 0.2 * e.target.count;
+        
+       
+        
+    });
+});
       
         
-    } 
+    } ;
     
-};
 
