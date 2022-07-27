@@ -11,7 +11,7 @@
     width:960px;
     height:900px;
    background-color: white;
-   border: 10px solid rgba(94, 122, 113, 0.568);
+   border: 10px solid black;
 }
 .container > div{
     border: 1px solid black;
