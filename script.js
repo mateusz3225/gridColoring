@@ -2,6 +2,7 @@
 const container= document.querySelector('.container');
 const button = document.querySelector('button');
 let square;
+
    for (i=0;i<256;i++){
         
         square=document.createElement(`div`);
@@ -17,7 +18,8 @@ divs.forEach( (div) =>
 
     div.addEventListener('mouseover', (e) => 
     { 
-        e.target.style.backgroundColor = 'orange';
+        let selectColor= document.querySelector('#color').value;
+        e.target.style.backgroundColor = `${selectColor}`;
        e.target.count += 0.5;
        e.target.style.opacity = 0.2 * e.target.count;
         
@@ -47,8 +49,8 @@ button.onclick= () => {
 {     div.count = 0;
 
     div.addEventListener('mouseover', (e) => 
-    { 
-        e.target.style.backgroundColor = 'black';
+    { let selectColor= document.querySelector('#color').value;
+        e.target.style.backgroundColor = `${selectColor}`;
        e.target.count += 0.5;
        e.target.style.opacity = 0.2 * e.target.count;
         
@@ -59,5 +61,3 @@ button.onclick= () => {
       
         
     } ;
-    
-
