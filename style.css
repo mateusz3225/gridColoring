@@ -24,11 +24,9 @@
     display: flex;
     justify-content:space-between;
 }
-.flexbox2{
-    
-}
+
 body {
-    background: linear-gradient(-50deg, #e22f2f, #6e19dd, #0fe762, #cbf70a);
+    background: linear-gradient(-50deg, #8b2fe2, #b94680, #9136b6, #cc2293);
     background-size: 400% 400%;
     animation: backgroundMoving 15s ease infinite;
 }

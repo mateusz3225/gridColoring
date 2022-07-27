@@ -15,10 +15,14 @@ const divs= document.querySelectorAll(".div");
 
 divs.forEach( (div) =>
 {     div.count = 0;
-
-    div.addEventListener('mouseover', (e) => 
+   
+       div.addEventListener('mouseover', (e) => 
     { 
         let selectColor= document.querySelector('#color').value;
+
+        let color=document.querySelector('#color');
+        color.addEventListener ('change', ()=> {e.target.count =0 ;});
+        
         e.target.style.backgroundColor = `${selectColor}`;
        e.target.count += 0.5;
        e.target.style.opacity = 0.2 * e.target.count;
@@ -50,6 +54,10 @@ button.onclick= () => {
 
     div.addEventListener('mouseover', (e) => 
     { let selectColor= document.querySelector('#color').value;
+    
+
+        let color=document.querySelector('#color');
+        color.addEventListener ('change', ()=> {e.target.count =0 ;});
         e.target.style.backgroundColor = `${selectColor}`;
        e.target.count += 0.5;
        e.target.style.opacity = 0.2 * e.target.count;
@@ -61,3 +69,6 @@ button.onclick= () => {
       
         
     } ;
+function listenForChange(){
+
+}
