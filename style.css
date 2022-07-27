@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width:40px;
+    height: 40px;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 960px ;
+    max-height: auto;
+    width:960px;
+    height:900px;
+   
+}
+.container > div{
+    border: 1px solid black;
+    padding: 10px;
+    overflow: hidden;
+     margin:0;
+}
+.display {
+background-color: red;
+}
+.button{
+    
+}
+.div{
+    
+}
