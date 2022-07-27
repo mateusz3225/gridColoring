@@ -12,12 +12,15 @@ let square;
 const divs= document.querySelectorAll(".div");
 
 divs.forEach( (div) =>
-{ 
-    div.addEventListener('mouseover', () => 
+{     div.count = 0;
+
+    div.addEventListener('mouseover', (e) => 
     { 
+        e.target.style.backgroundColor = 'black';
+       e.target.count += 0.5;
+       e.target.style.opacity = 0.2 * e.target.count;
+        
        
-        div.style.cssText = `background-color: rgb( ${Math.random()*219+16},${Math.random()*219+16} ,${Math.random()*219+16} );`;
-       console.log(div.target);
         
     });
 });
@@ -45,9 +48,4 @@ button.onclick= () => {
     } 
     
 };
-function ChangeRGB()  {
-    let Rgb = document.querySelector('.div');
-    let getRgbValue= getComputedStyle(Rgb).getPropertyValue('background-color');
-    console.log(getRgbValue);
-    }
-    ChangeRGB();
+
