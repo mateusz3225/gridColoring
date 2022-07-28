@@ -3,6 +3,7 @@ const container= document.querySelector('.container');
 const button = document.querySelector('button');
 let square;
 
+
    for (i=0;i<256;i++){
         
         square=document.createElement(`div`);
@@ -35,8 +36,9 @@ divs.forEach( (div) =>
 
 
 button.onclick= () => {
+    const inputSize= document.querySelector('#size').value;
     const allDivs= document.querySelectorAll('.div');
-    const number =prompt("how large do u want your grid ? from 1 to 100");
+    const number =inputSize;
     if (number>=100 || number<=0){alert("number higher than 100 or lower than 1, please eneter correct number ");return };
     allDivs.forEach ( (divs)=> { divs.remove();} );
     container.style.cssText=`grid-template-columns: repeat(${number}, 1fr);grid-template-rows: repeat(${number}, 1fr);`;
@@ -72,3 +74,4 @@ button.onclick= () => {
 function listenForChange(){
 
 }
+
