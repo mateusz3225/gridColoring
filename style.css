@@ -11,7 +11,7 @@
     width:960px;
     height:900px;
    background-color: white;
-   border: 10px solid black;
+   border: 5px solid black;
 }
 .container > div{
     border: 1px solid gray;
@@ -23,8 +23,8 @@
 .header{
     display: flex;
     justify-content: center;
-    gap:43vh;
-    margin-bottom: 1px;
+    gap:42vh;
+    margin-bottom: 4px;
     color:white;
     font-weight: bold;
 }
