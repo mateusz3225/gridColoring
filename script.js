@@ -39,7 +39,7 @@ button.onclick= () => {
     const inputSize= document.querySelector('#size').value;
     const allDivs= document.querySelectorAll('.div');
     const number =inputSize;
-    if (number>=100 || number<=0){alert("number higher than 100 or lower than 1, please eneter correct number ");return };
+    if (number>=100 || number<=0 || number==undefined){alert("number higher than 100 or lower than 1, please eneter correct number ");return };
     allDivs.forEach ( (divs)=> { divs.remove();} );
     container.style.cssText=`grid-template-columns: repeat(${number}, 1fr);grid-template-rows: repeat(${number}, 1fr);`;
     for (i=0;i<(number*number);i++){
